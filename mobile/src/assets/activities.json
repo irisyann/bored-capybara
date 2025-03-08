@@ -1,0 +1,98 @@
+[
+    {
+      "name": "Bath",
+      "title": "Go take a bath.",
+      "description": "Capy thinks you smell sus 💨",
+      "image": "./assets/capybaras/bath.png"
+    },
+    {
+      "name": "Burger",
+      "title": "Eat a burger.",
+      "description": "Capy is craving one too 🍔",
+      "image": "./assets/capybaras/burger.png"
+    },
+    {
+      "name": "Chicken",
+      "title": "Eat some chicken.",
+      "description": "Fried chicken slaps 🍗",
+      "image": "./assets/capybaras/chicken.png"
+    },
+    {
+      "name": "Cook",
+      "title": "Cook a meal.",
+      "description": "Just don't burn your house down 🔥",
+      "image": "./assets/capybaras/cook.png"
+    },
+    {
+      "name": "Donut",
+      "title": "Have a donut.",
+      "description": "Capy lowkey also wants one 🍩",
+      "image": "./assets/capybaras/donut.png"
+    },
+    {
+      "name": "Doomscroll",
+      "title": "Continue doomscrolling.",
+      "description": "Get that dopamine hit lol",
+      "image": "./assets/capybaras/doomscroll.png"
+    },
+    {
+      "name": "Drink",
+      "title": "Grab a drink.",
+      "description": "Hydrate or caffeinate just chug that 💦",
+      "image": "./assets/capybaras/drink.png"
+    },
+    {
+      "name": "Instrument",
+      "title": "Play an instrument.",
+      "description": "Or... just pretend to🎶",
+      "image": "./assets/capybaras/instrument.png"
+    },
+    {
+      "name": "Journal",
+      "title": "Write in a journal.",
+      "description": "Just brain dump 🧠",
+      "image": "./assets/capybaras/journal.png"
+    },
+    {
+      "name": "Letter",
+      "title": "Write a love letter.",
+      "description": "Shoot your shot bestie 👀",
+      "image": "./assets/capybaras/letter.png"
+    },
+    {
+      "name": "Paint",
+      "title": "Paint a picture.",
+      "description": "Paint a happy little tree :)",
+      "image": "./assets/capybaras/paint.png"
+    },
+    {
+      "name": "Poop",
+      "title": "Go poop.",
+      "description": "Clear your colon bestie 💩",
+      "image": "./assets/capybaras/poop.png"
+    },
+    {
+      "name": "Potion",
+      "title": "Brew a magic potion.",
+      "description": "Harry Potter ahh activity ⚡",
+      "image": "./assets/capybaras/potion.png"
+    },
+    {
+      "name": "Read",
+      "title": "Read a book.",
+      "description": "Don't be Jared, 19 (iykyk)",
+      "image": "./assets/capybaras/read.png"
+    },
+    {
+      "name": "Sleep",
+      "title": "Take a nap.",
+      "description": "Gotta get your beauty sleep 💤",
+      "image": "./assets/capybaras/sleep.png"
+    },
+    {
+      "name": "Stroll",
+      "title": "Go for a stroll outdoors.",
+      "description": "Get that vitamin D ☀️",
+      "image": "./assets/capybaras/stroll.png"
+    }
+  ]

@@ -1,0 +1,112 @@
+:root {
+  background-color: #B27966;
+  --color-text: #fff;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  margin: auto;
+}
+
+text {
+  color: var(--color-text);
+}
+
+.Banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 15%;
+}
+
+.Button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid #703627;
+  border-radius: 5px;
+  background-color: #703627;
+  color: #fff;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #814232;
+}
+
+.ButtonText {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Content {
+  position: absolute;
+  background: radial-gradient(
+    71.43% 62.3% at 46.43% 36.43%,
+    #e7d2c3 15%,
+    #dab69d 56.35%,
+    #DBA682 100%
+  );
+  box-shadow: 0px 12.93px 28.74px 0px #ffd28db2 inset;
+  border-radius: 0 0 50% 50%;
+  width: 150%;             
+  height: 60vh;
+  top: 0;                 
+  left: -25%;             
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.Subheader {
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.Capybara {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  width: 80%;
+}
+
+.CapybaraImage {
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.Title {
+  font-size: 25px;
+  color: #703627;
+  margin: 15rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Description {
+  font-size: 20px;
+  color: #703627;
+  margin: 15rpx;
+  text-align: center;
+}
