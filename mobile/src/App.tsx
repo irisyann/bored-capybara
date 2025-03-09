@@ -30,22 +30,21 @@ export function App() {
   })
   const [startedGenerating, setStartedGenerating] = useState(false)
   const [tapped, setTapped] = useState(false)
-  
+  const [previousActivityName, setPreviousActivityName] = useState('')
+
   const getRandomActivity = useCallback(() => {
-    const activity = activities[Math.floor(Math.random() * activities.length)]
+    const filteredActivities = activities.filter((activity) => activity.name !== previousActivityName)
+    const activity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)]
     setTapped(true)
     setActivity(activity)
     setStartedGenerating(true);
 
     setTimeout(() => {
       setTapped(false)
-    }, 1000)
-  }, [activity, startedGenerating, tapped])
+    }, 500)
 
-  const visitLink = useCallback(() => {
-    // Note: Lynx does not support window.open
-    window.open('https://github.com/irisyann', '_blank')
-  }, [])
+    setPreviousActivityName(activity.name)
+  }, [activity, startedGenerating, tapped, previousActivityName])
 
   const landingImage = Main;
   const images: Record<string, string> = {
@@ -86,11 +85,13 @@ export function App() {
           </view>
           <view className={tapped ? 'DisabledButton' : 'Hidden'}>
             <view className='LoadingSpinner'></view>
+            <text className='ButtonText LoadingButtonText'>Hmm...🧠</text>
           </view>
         </view>
       </view>
       <view className='Footer'>
-        <text>made by <text className='FooterLink' bindtap={visitLink}>irisyann</text></text>
+        <text>made by <text className='FooterLink'>irisyann</text></text>
+        <text>illustrations by <text className='FooterLink'>olya litvinova</text></text>
       </view>
     </view>
   )
