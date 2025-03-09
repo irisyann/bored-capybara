@@ -36,10 +36,10 @@ export function App() {
     const filteredActivities = activities.filter((activity) => activity.name !== previousActivityName)
     const activity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)]
     setTapped(true)
-    setActivity(activity)
-    setStartedGenerating(true);
 
     setTimeout(() => {
+      setStartedGenerating(true);
+      setActivity(activity)
       setTapped(false)
     }, 500)
 
