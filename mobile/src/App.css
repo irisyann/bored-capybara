@@ -31,21 +31,54 @@ text {
 .Button {
   padding: 10px 20px;
   margin: 10px;
-  border: 2px solid #703627;
   border-radius: 5px;
   background-color: #703627;
   color: #fff;
   transition: all 0.5s ease-out;
   cursor: pointer;
+  display: block;
 }
 
 .Button:hover {
   background-color: #814232;
 }
 
+.Hidden {
+  display: none;
+  visibility: hidden;
+}
+
 .ButtonText {
   font-size: 20px;
   font-weight: bold;
+}
+
+.DisabledButton {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #70483e9e;
+  cursor: not-allowed;
+  display: block;
+}
+
+.LoadingSpinner {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .Content {
@@ -108,5 +141,18 @@ text {
   font-size: 20px;
   color: #703627;
   margin: 15rpx;
+  text-align: center;
+}
+
+.Footer {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.FooterLink {
+  color: #fff;
+  text-decoration: underline;
   text-align: center;
 }

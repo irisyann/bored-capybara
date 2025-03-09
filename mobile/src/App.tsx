@@ -1,4 +1,4 @@
-import { useCallback, useState } from '@lynx-js/react'
+import { useCallback, useState, useEffect } from '@lynx-js/react'
 
 import './App.css'
 import activities from './assets/activities.json' assert { type: "json" };
@@ -29,12 +29,23 @@ export function App() {
     image: './assets/capybaras/main.png',
   })
   const [startedGenerating, setStartedGenerating] = useState(false)
+  const [tapped, setTapped] = useState(false)
   
   const getRandomActivity = useCallback(() => {
     const activity = activities[Math.floor(Math.random() * activities.length)]
+    setTapped(true)
     setActivity(activity)
-    setStartedGenerating(true)
-  }, [activity, startedGenerating])
+    setStartedGenerating(true);
+
+    setTimeout(() => {
+      setTapped(false)
+    }, 1000)
+  }, [activity, startedGenerating, tapped])
+
+  const visitLink = useCallback(() => {
+    // Note: Lynx does not support window.open
+    window.open('https://github.com/irisyann', '_blank')
+  }, [])
 
   const landingImage = Main;
   const images: Record<string, string> = {
@@ -59,7 +70,6 @@ export function App() {
 
   return (
     <view>
-      <view className='Background' />
       <view className='App'>
         <view className='Content'>
           <view className='Capybara'>
@@ -71,10 +81,16 @@ export function App() {
         <view className='Banner'>
           <text className='Subheader'>Bored?</text>
           <text className='Subheader'>Let Capy tell you what to do.</text>
-          <view className='Button' bindtap={getRandomActivity}>
-              <text className='ButtonText'>Tap me</text>
+          <view className={tapped ? 'Hidden' : 'Button'} bindtap={getRandomActivity}>
+            <text className={tapped ? 'Hidden' : 'ButtonText'}>Tap me</text>
+          </view>
+          <view className={tapped ? 'DisabledButton' : 'Hidden'}>
+            <view className='LoadingSpinner'></view>
           </view>
         </view>
+      </view>
+      <view className='Footer'>
+        <text>made by <text className='FooterLink' bindtap={visitLink}>irisyann</text></text>
       </view>
     </view>
   )
